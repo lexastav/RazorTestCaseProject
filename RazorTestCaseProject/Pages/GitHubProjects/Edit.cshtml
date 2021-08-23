@@ -1,0 +1,54 @@
+﻿@page
+@model RazorTestCaseProject.Pages.GitHubProjects.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Редактирование</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="GitHubProject.ID" />
+            <div class="form-group">
+                <label class="control-label">Название проекта</label>
+                <input asp-for="GitHubProject.ProjectName" class="form-control" />
+                <span asp-validation-for="GitHubProject.ProjectName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Автор</label>
+                <input asp-for="GitHubProject.Author" class="form-control" />
+                <span asp-validation-for="GitHubProject.Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">Звезд</label>
+                <input asp-for="GitHubProject.Stargazers" class="form-control" />
+                <span asp-validation-for="GitHubProject.Stargazers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> Просмотров</label>
+                <input asp-for="GitHubProject.Watchers" class="form-control" />
+                <span asp-validation-for="GitHubProject.Watchers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">Ссылка на проект</label>
+                <input asp-for="GitHubProject.ProjectUrl" class="form-control" />
+                <span asp-validation-for="GitHubProject.ProjectUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться к списку</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

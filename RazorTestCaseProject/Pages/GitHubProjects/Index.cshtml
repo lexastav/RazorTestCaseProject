@@ -1,0 +1,60 @@
+﻿@page
+@model RazorTestCaseProject.Pages.GitHubProjects.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Проекты</h1>
+
+<p>
+    <a asp-page="Create">Добавить проект</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Название
+            </th>
+            <th>
+                Автор
+            </th>
+            <th>
+                Звезд
+            </th>
+            <th>
+                Просмотров
+            </th>
+            <th>
+                Ссылка на проект
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.GitHubProject) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stargazers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Watchers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectUrl)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Подробнее</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
