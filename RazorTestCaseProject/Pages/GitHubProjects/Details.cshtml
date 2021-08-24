@@ -5,45 +5,51 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Подробности</h1>
+<div class="card">
+    <div class="card-body">
+        <h1>Подробности</h1>
 
-<div>
-    <h4>GitHubProject</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            Название проекта
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.GitHubProject.ProjectName)
-        </dd>
-        <dt class="col-sm-2">
-            Автор
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.GitHubProject.Author)
-        </dd>
-        <dt class="col-sm-2">
-            Звезд
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.GitHubProject.Stargazers)
-        </dd>
-        <dt class="col-sm-2">
-            Просмотров
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.GitHubProject.Watchers)
-        </dd>
-        <dt class="col-sm-2">
-            Ссылка на проект
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.GitHubProject.ProjectUrl)
-        </dd>
-    </dl>
+        <div>
+            <h4>GitHubProject</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Название проекта
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.GitHubProject.ProjectName)
+                </dd>
+                <dt class="col-sm-2">
+                    Автор
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.GitHubProject.Author)
+                </dd>
+                <dt class="col-sm-2">
+                    Звезд
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.GitHubProject.Stargazers)
+                </dd>
+                <dt class="col-sm-2">
+                    Просмотров
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.GitHubProject.Watchers)
+                </dd>
+                <dt class="col-sm-2">
+                    Ссылка на проект
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.GitHubProject.ProjectUrl)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-page="./Edit" asp-route-id="@Model.GitHubProject.ID">Изменить</a> |
+            <a asp-page="./Index">Вернуться к списку</a>
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.GitHubProject.ID">Изменить</a> |
-    <a asp-page="./Index">Вернуться к списку</a>
-</div>
+
+

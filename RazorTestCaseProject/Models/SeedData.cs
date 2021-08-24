@@ -25,8 +25,8 @@ namespace RazorTestCaseProject.Models
                     {
                         ProjectName = "PLACE",
                         Author = "sanweiliti",
-                        Stargazers = 32,
-                        Watchers = 5,
+                        Stargazers = 5,
+                        Watchers = 32,
                         ProjectUrl = "https://github.com/sanweiliti/PLACE"
 
                     },
@@ -35,8 +35,8 @@ namespace RazorTestCaseProject.Models
                     {
                         ProjectName = "kubescape",
                         Author = "armosec",
-                        Stargazers = 1000,
-                        Watchers = 19,
+                        Stargazers = 4,
+                        Watchers = 1000,
                         ProjectUrl = "https://github.com/armosec/kubescape"
                     },
 

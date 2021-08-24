@@ -10,6 +10,15 @@
 <p>
     <a asp-page="Create">Добавить проект</a>
 </p>
+<form>
+    <p>
+        Авторы: <select asp-for="GitHubProjectAuthor" asp-items="Model.Authors">
+            <option value="">Все</option>
+        </select>
+        Название: <input type-"text" asp-for="SearchString" />
+        <input type="submit" value="Отфильтровать" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
